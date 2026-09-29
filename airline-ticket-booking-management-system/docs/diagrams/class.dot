@@ -1,0 +1,14 @@
+digraph G {
+  rankdir=LR;
+  node [shape=record, fontname="Arial"];
+  Person [label="{Person (abstract)|- name\l- phone\l|+ getName()\l+ getPhone()\l}"];
+  Passenger [label="{Passenger| - email\l| + getEmail()\l}"];
+  Flight [label="{Flight| - flightNumber\l- source\l- destination\l- fare\l- availableSeats\l|+ bookSeat()\l+ releaseSeat()\l+ toString()\l}"];
+  Booking [label="{Booking| - bookingId\l- passenger\l- flightNumber\l- amount\l- status\l|+ cancel()\l+ toString()\l}"];
+  AirlineSystem [label="{AirlineSystem| - flights\l- bookings\l|+ searchFlights()\l+ createBooking()\l+ cancelBooking()\l}"];
+  Person -> Passenger [arrowhead=onormal];
+  Passenger -> Booking [label="passenger"];
+  Flight -> Booking [label="flightNumber"];
+  AirlineSystem -> Flight [label="manages"];
+  AirlineSystem -> Booking [label="manages"];
+}

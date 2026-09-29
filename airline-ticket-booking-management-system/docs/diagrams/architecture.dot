@@ -1,0 +1,15 @@
+digraph G {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fontname="Arial"];
+  User [label="User / Evaluator"];
+  Main [label="Main\nCLI Menu"];
+  System [label="AirlineSystem\nBusiness Logic"];
+  Models [label="Flight / Passenger / Booking\nDomain Classes"];
+  Storage [label="FileManager\nObject I/O"];
+  Thread [label="NotificationService\nThread"];
+  Data [label="airline_data.dat\nLocal Storage"];
+  User -> Main -> System;
+  System -> Models;
+  System -> Storage -> Data;
+  System -> Thread;
+}

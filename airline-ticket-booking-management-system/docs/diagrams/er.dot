@@ -1,0 +1,14 @@
+digraph G {
+  rankdir=LR;
+  graph [nodesep=0.6, ranksep=0.9];
+  node [fontname="Arial"];
+  Passenger [shape=box, label="PASSENGER\nPK: passenger identity\nname\nphone\nemail"];
+  Booking [shape=box, label="BOOKING\nPK: bookingId\namount\nbookedAt\nstatus\nflightNumber"];
+  Flight [shape=box, label="FLIGHT\nPK: flightNumber\nairlineName\nsource\ndestination\ndepartureTime\nfare\navailableSeats"];
+  R1 [shape=diamond, label="makes"];
+  R2 [shape=diamond, label="for"];
+  Passenger -> R1 [dir=none];
+  R1 -> Booking [dir=none, label="1 : many"];
+  Booking -> R2 [dir=none];
+  R2 -> Flight [dir=none, label="many : 1"];
+}

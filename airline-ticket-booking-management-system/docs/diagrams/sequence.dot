@@ -1,0 +1,20 @@
+digraph G {
+  rankdir=TB;
+  node [shape=box, style="rounded,filled", fontname="Arial"];
+  User [label="User"];
+  Main [label="Main"];
+  System [label="AirlineSystem"];
+  Flight [label="Flight"];
+  File [label="FileManager"];
+  Thread [label="NotificationService"];
+  User -> Main [label="choose Book Ticket"];
+  Main -> System [label="createBooking(data)"];
+  System -> Flight [label="bookSeat()"];
+  Flight -> System [label="seat confirmed"];
+  System -> File [label="save(flights, bookings)"];
+  File -> System [label="saved"];
+  System -> Thread [label="start()"];
+  Thread -> User [label="confirmation notification"];
+  System -> Main [label="Booking ID / status"];
+  Main -> User [label="display ticket details"];
+}

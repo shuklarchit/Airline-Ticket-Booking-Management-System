@@ -1,0 +1,30 @@
+digraph G {
+  rankdir=TB;
+  node [shape=box, style="rounded,filled", fontname="Arial"];
+  Start [label="Start"];
+  Menu [label="Display Main Menu"];
+  Choice [label="Select Operation"];
+  Flights [label="View / Search Flights"];
+  Book [label="Enter Passenger + Flight"];
+  Validate [label="Validate Input"];
+  Seat [label="Seat Available?"];
+  Confirm [label="Create Booking + Save Data"];
+  Cancel [label="Cancel Booking + Release Seat"];
+  History [label="View Booking History"];
+  Exit [label="Save Data & Exit"];
+  End [label="End"];
+  Start -> Menu -> Choice;
+  Choice -> Flights [label="1 / 2"];
+  Choice -> Book [label="3"];
+  Book -> Validate -> Seat;
+  Seat -> Confirm [label="Yes"];
+  Seat -> Menu [label="No"];
+  Confirm -> Menu;
+  Choice -> History [label="4"];
+  History -> Menu;
+  Choice -> Cancel [label="5"];
+  Cancel -> Menu;
+  Flights -> Menu;
+  Choice -> Exit [label="6"];
+  Exit -> End;
+}

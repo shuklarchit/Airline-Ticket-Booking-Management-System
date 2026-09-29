@@ -1,0 +1,11 @@
+digraph G {
+  rankdir=LR;
+  node [shape=record, fontname="Arial"];
+  Flights [label="{Flights Collection|flightNumber\lairlineName\lsource\ldestination\ldepartureTime\lfare\lavailableSeats\l}"];
+  Bookings [label="{Bookings Collection|bookingId\lpassenger\lflightNumber\lamount\lbookedAt\lstatus\l}"];
+  Passenger [label="{Passenger|name\lphone\lemail\l}"];
+  File [label="{airline_data.dat|Serialized Java objects\lObjectOutputStream\lObjectInputStream\l}"];
+  Flights -> File;
+  Bookings -> File;
+  Passenger -> Bookings [label="embedded in booking"];
+}

@@ -1,0 +1,14 @@
+digraph G {
+  rankdir=LR;
+  node [fontname="Arial"];
+  graph [splines=ortho];
+  User [shape=ellipse, label="User"];
+  System [shape=box, style="rounded", label="Airline Ticket Booking\nManagement System"];
+  View [shape=ellipse, label="View Flights"];
+  Search [shape=ellipse, label="Search Flight"];
+  Book [shape=ellipse, label="Book Ticket"];
+  History [shape=ellipse, label="View Bookings"];
+  Cancel [shape=ellipse, label="Cancel Ticket"];
+  User -> View; User -> Search; User -> Book; User -> History; User -> Cancel;
+  View -> System [dir=none]; Search -> System [dir=none]; Book -> System [dir=none]; History -> System [dir=none]; Cancel -> System [dir=none];
+}

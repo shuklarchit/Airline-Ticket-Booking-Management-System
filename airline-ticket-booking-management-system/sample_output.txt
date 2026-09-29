@@ -1,0 +1,87 @@
+====================================================
+       AIRLINE TICKET BOOKING MANAGEMENT SYSTEM
+====================================================
+
+---------------- MAIN MENU ----------------
+1. View all flights
+2. Search flights
+3. Book ticket
+4. View bookings
+5. Cancel ticket
+6. Exit
+Enter your choice: 
+---------------- AVAILABLE FLIGHTS ----------------
+Flight   Airline          From         To              Departure        Fare         Seats
+AI101    Air India        Delhi        -> Mumbai       08:30            Rs.5200.00  25 seats
+6E205    IndiGo           Mumbai       -> Bengaluru    11:15            Rs.4300.00  30 seats
+UK810    Vistara          Delhi        -> Bengaluru    16:45            Rs.6100.00  20 seats
+IX332    Air India Exp    Kochi        -> Delhi        19:20            Rs.5800.00  18 seats
+
+---------------- MAIN MENU ----------------
+1. View all flights
+2. Search flights
+3. Book ticket
+4. View bookings
+5. Cancel ticket
+6. Exit
+Enter your choice: Enter source: Enter destination: 
+Search results:
+UK810    Vistara          Delhi        -> Bengaluru    16:45            Rs.6100.00  20 seats
+
+---------------- MAIN MENU ----------------
+1. View all flights
+2. Search flights
+3. Book ticket
+4. View bookings
+5. Cancel ticket
+6. Exit
+Enter your choice: Enter flight number: Passenger name: Phone: Email: 
+Ticket booked successfully!
+Booking ID : B0001
+Passenger  : Sample Passenger
+Flight     : UK810
+Amount     : Rs. 6100.00
+Status     : CONFIRMED
+
+---------------- MAIN MENU ----------------
+1. View all flights
+2. Search flights
+3. Book ticket
+4. View bookings
+5. Cancel ticket
+6. Exit
+Enter your choice: 
+---------------- BOOKING HISTORY ----------------
+Booking    Passenger            Flight     Amount       Status     Booked At
+B0001      Sample Passenger        UK810      Rs.6100.00   CONFIRMED  2026-09-29T14:08:36.402956169
+
+---------------- MAIN MENU ----------------
+1. View all flights
+2. Search flights
+3. Book ticket
+4. View bookings
+5. Cancel ticket
+6. Exit
+Enter your choice: Enter booking ID to cancel: Booking cancelled successfully.
+
+---------------- MAIN MENU ----------------
+1. View all flights
+2. Search flights
+3. Book ticket
+4. View bookings
+5. Cancel ticket
+6. Exit
+Enter your choice: 
+---------------- BOOKING HISTORY ----------------
+Booking    Passenger            Flight     Amount       Status     Booked At
+B0001      Sample Passenger        UK810      Rs.6100.00   CANCELLED  2026-09-29T14:08:36.402956169
+
+---------------- MAIN MENU ----------------
+1. View all flights
+2. Search flights
+3. Book ticket
+4. View bookings
+5. Cancel ticket
+6. Exit
+Enter your choice: Data saved. Thank you for using the system!
+[Notification Thread] Confirmation sent to Sample Passenger for booking B0001.
